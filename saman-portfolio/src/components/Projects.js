@@ -41,7 +41,7 @@ const Projects = () => {
     },
     {
       id: 5,
-      title: "Portfolio Website",
+      title: "Portfolio Website ",
       description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and clean design.",
       technologies: ["React", "CSS3", "JavaScript", "HTML5"],
       image: "💼",
