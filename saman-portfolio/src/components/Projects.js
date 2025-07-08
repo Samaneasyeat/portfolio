@@ -32,6 +32,15 @@ const Projects = () => {
     },
     {
       id: 4,
+      title: "Habit Tracker",
+      description: "A comprehensive habit tracking application with add, delete, and update functionality. Features include progress visualization, streak tracking, and habit categorization.",
+      technologies: ["React", "JavaScript", "HTML", "CSS"],
+      image: "📈",
+      github: "https://github.com/Samaneasyeat/habit-tracker",
+      live: "https://samaneasyeat.github.io/habit-tracker/"
+    },
+    {
+      id: 5,
       title: "Portfolio Website",
       description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and clean design.",
       technologies: ["React", "CSS3", "JavaScript", "HTML5"],
