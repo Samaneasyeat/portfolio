@@ -27,8 +27,8 @@ const Projects = () => {
       description: "A responsive weather application that displays current weather conditions and forecasts using external APIs and interactive charts.",
       technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
       image: "🌤️",
-      github: "#",
-      live: "#"
+      github: "https://github.com/Samaneasyeat/weather-app",
+      live: "https://samaneasyeat.github.io/weather-app/"
     },
     {
       id: 4,
