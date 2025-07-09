@@ -1,70 +1,52 @@
 import React from 'react';
 import './Skills.css';
 
-const Skills = () => {
-  const skillCategories = [
-    {
-      category: "Frontend",
-      skills: [
-        { name: "React", level: 90 },
-        { name: "JavaScript", level: 85 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "TypeScript", level: 80 },
-        { name: "Vue.js", level: 75 }
-      ]
-    },
-    {
-      category: "Backend",
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "Express.js", level: 90 },
-        { name: "MongoDB", level: 75 },
-        { name: "PostgreSQL", level: 70 }
-      ]
-    },
-    {
-      category: "Tools & Others",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "Docker", level: 70 },
-        { name: "AWS", level: 65 },
-        { name: "Figma", level: 75 },
-        { name: "Jest", level: 80 }
-      ]
-    }
-  ];
+const skills = [
+  {
+    category: 'Languages',
+    icon: '💻',
+    items: ['JavaScript (ES6+)', 'TypeScript']
+  },
+  {
+    category: 'Markup & Styling',
+    icon: '🎨',
+    items: ['HTML5', 'CSS3', 'SCSS', 'SASS']
+  },
+  {
+    category: 'Frameworks / Libraries',
+    icon: '⚛️',
+    items: ['React.js', 'Angular', 'Redux', 'Bootstrap', 'Tailwind CSS', 'Ant Design']
+  },
+  {
+    category: 'Tools',
+    icon: '🛠️',
+    items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Chrome DevTools', 'IntelliJ Idea']
+  },
+  {
+    category: 'Database',
+    icon: '🗄️',
+    items: ['Oracle SQL Developer']
+  }
+];
 
-  return (
-    <section id="skills" className="skills">
-      <div className="container">
-        <h2 className="section-title">Skills & Technologies</h2>
-        <div className="skills-content">
-          {skillCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="skill-category">
-              <h3 className="category-title">{category.category}</h3>
-              <div className="skills-grid">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+const Skills = () => (
+  <section id="skills" className="skills">
+    <div className="container">
+      <h2 className="section-title">Skills</h2>
+      <div className="skills-grid">
+        {skills.map((group) => (
+          <div key={group.category} className="skills-group">
+            <div className="skills-group-title">{group.icon} {group.category}</div>
+            <ul className="skills-list">
+              {group.items.map((item) => (
+                <li key={item} className="skills-item">{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Skills; 
