@@ -5,6 +5,15 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Food Ordering App",
+      description: "A modern food ordering application with add to cart functionality, shopping cart management, product filtering, and checkout features. Features a clean, minimalist UI with smooth user experience.",
+      technologies: ["React", "JavaScript", "HTML", "CSS", "Redux Toolkit"],
+      image: "🍕",
+      github: "https://github.com/Samaneasyeat/food-app",
+      live: "https://samaneasyeat.github.io/food-app/"
+    },
+    {
+      id: 2,
       title: "E-Commerce Platform",
       description: "A full-stack e-commerce application built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
@@ -13,7 +22,7 @@ const Projects = () => {
       live: "#"
     },
     {
-      id: 2,
+      id: 3,
       title: "Task Management App",
       description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       technologies: ["React", "Socket.io", "Node.js", "PostgreSQL"],
@@ -22,7 +31,7 @@ const Projects = () => {
       live: "#"
     },
     {
-      id: 3,
+      id: 4,
       title: "Weather Dashboard",
       description: "A responsive weather application that displays current weather conditions and forecasts using external APIs and interactive charts.",
       technologies: ["React", "Chart.js", "OpenWeather API", "CSS3"],
@@ -31,7 +40,7 @@ const Projects = () => {
       live: "https://samaneasyeat.github.io/weather-app/"
     },
     {
-      id: 4,
+      id: 5,
       title: "Habit Tracker",
       description: "A comprehensive habit tracking application with add, delete, and update functionality. Features include progress visualization, streak tracking, and habit categorization.",
       technologies: ["React", "JavaScript", "HTML", "CSS"],
@@ -40,7 +49,7 @@ const Projects = () => {
       live: "https://samaneasyeat.github.io/habit-tracker/"
     },
     {
-      id: 5,
+      id: 6,
       title: "Portfolio Website ",
       description: "A modern, responsive portfolio website showcasing projects and skills with smooth animations and clean design.",
       technologies: ["React", "CSS3", "JavaScript", "HTML5"],
