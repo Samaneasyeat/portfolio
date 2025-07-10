@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
 
+const comments = [
+  'Committed',
+  'Challenge Taker',
+  'Team Player',
+  'Pixel-Perfect Coder',
+  'Always Learning',
+  'Proactive',
+  'Creative Problem Solver'
+];
+
 const About = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % comments.length);
+    }, 1800);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="about" className="about">
+    <section id="about" className="about themed-about-section">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
+        <h2 className="section-title themed-about-title">About Me</h2>
+        <div className="about-badge-carousel">
+          <span className="about-badge animated-badge">{comments[current]}</span>
+        </div>
+        <div className="about-content about-content-centered">
           <div className="about-text">
             <p>
               I'm a passionate full-stack developer with a love for creating 
@@ -27,16 +49,16 @@ const About = () => {
               and collaborate on interesting projects.
             </p>
           </div>
-          <div className="about-stats">
-            <div className="stat-item">
+          <div className="about-stats-card">
+            <div className="themed-stat-item">
               <h3>3+</h3>
               <p>Years Experience</p>
             </div>
-            <div className="stat-item">
+            <div className="themed-stat-item">
               <h3>20+</h3>
               <p>Projects Completed</p>
             </div>
-            <div className="stat-item">
+            <div className="themed-stat-item">
               <h3>15+</h3>
               <p>Technologies</p>
             </div>

@@ -1,52 +1,47 @@
 import React from 'react';
 import './Skills.css';
 
-const skills = [
+const skillCategories = [
   {
     category: 'Languages',
-    icon: '💻',
-    items: ['JavaScript (ES6+)', 'TypeScript']
+    skills: ['JavaScript (ES6+)', 'TypeScript']
   },
   {
     category: 'Markup & Styling',
-    icon: '🎨',
-    items: ['HTML5', 'CSS3', 'SCSS', 'SASS']
+    skills: ['HTML5', 'CSS3', 'SCSS']
   },
   {
-    category: 'Frameworks / Libraries',
-    icon: '⚛️',
-    items: ['React.js', 'Angular', 'Redux', 'Bootstrap', 'Tailwind CSS', 'Ant Design']
+    category: 'Frameworks/Libraries',
+    skills: ['React.js', 'Angular', 'Redux', 'Bootstrap', 'Tailwind CSS', 'Ant Design']
   },
   {
     category: 'Tools',
-    icon: '🛠️',
-    items: ['Git', 'GitHub', 'Postman', 'VS Code', 'Chrome DevTools', 'IntelliJ Idea']
+    skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'Chrome DevTools', 'IntelliJ Idea']
   },
   {
     category: 'Database',
-    icon: '🗄️',
-    items: ['Oracle SQL Developer']
+    skills: ['Oracle SQL Developer']
   }
 ];
 
-const Skills = () => (
-  <section id="skills" className="skills">
-    <div className="container">
-      <h2 className="section-title">Skills</h2>
-      <div className="skills-grid">
-        {skills.map((group) => (
-          <div key={group.category} className="skills-group">
-            <div className="skills-group-title">{group.icon} {group.category}</div>
-            <ul className="skills-list">
-              {group.items.map((item) => (
-                <li key={item} className="skills-item">{item}</li>
+const Skills = () => {
+  return (
+    <section id="skills" className="skills skills-categories-section">
+      <h2 className="section-title">SKILLS</h2>
+      <div className="skills-categories-list">
+        {skillCategories.map((cat, idx) => (
+          <div className="skills-category-box" key={idx}>
+            <div className="skills-category-title">{cat.category}</div>
+            <div className="skills-category-tags">
+              {cat.skills.map((skill, i) => (
+                <span className="skills-category-tag" key={i}>{skill}</span>
               ))}
-            </ul>
+            </div>
           </div>
         ))}
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Skills; 

@@ -33,7 +33,6 @@ const Header = () => {
             <li><button onClick={() => scrollToSection('skills')}>Skills</button></li>
             <li><button onClick={() => scrollToSection('projects')}>Projects</button></li>
             <li><button onClick={() => scrollToSection('contact')}>Contact</button></li>
-            <a href="/resume.pdf" className="btn btn-primary" target="_blank" rel="noopener noreferrer">Resume</a>
           </ul>
         </nav>
       </div>
